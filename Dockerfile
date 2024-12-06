@@ -1,5 +1,5 @@
 # Première partie : créer notre jar
-FROM maven:3-eclipse-temurin-21-alpine as maven
+FROM maven:3.9.8-eclipse-temurin-21-alpine as maven
 
 WORKDIR /app
 
