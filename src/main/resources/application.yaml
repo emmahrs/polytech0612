@@ -4,16 +4,17 @@ server:
 spring:
   application.name: backend
   datasource:
-#    url: jdbc:h2:mem:moviedb
-#    url: jdbc:h2:file:./data/moviedb
-    url: jdbc:postgresql://localhost:5432/moviedb
+    #url: jdbc:h2:mem:moviedb;NON_KEYWORDS=year
+    #url: jdbc:h2:file:./data/moviedb;NON_KEYWORDS=year
+    #url: jdbc:postgresql://localhost:5432/moviedb
+    url: jdbc:postgresql://host.docker.internal:5432/moviedb
     username: username
     password: password
-#    driverClassName: org.h2.Driver
+    #driverClassName: org.h2.Driver
     driverClassName: org.postgresql.Driver
   jpa:
-#    database-platform: org.hibernate.dialect.H2Dialect
-    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    database-platform: org.hibernate.dialect.H2Dialect
+    #database-platform: org.hibernate.dialect.PostgreSQLDialect
     hibernate:
       ddl-auto: update
   h2:
